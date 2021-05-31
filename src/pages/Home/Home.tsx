@@ -17,10 +17,10 @@ const Home: NextPage = () => {
 
         <Button
           onClick={() => {
-            router.push('/about');
+            router.push('/blog/example');
           }}
         >
-          About
+          Blog
         </Button>
       </Box>
     </HomeContainer>
