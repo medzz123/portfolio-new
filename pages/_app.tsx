@@ -29,8 +29,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <Fragment>
       <Head>
-        <title>Template</title>
-        <meta name="description" content="Template Generator" />
+        <title>Mahedi Hasan | Software Developer</title>
+        <meta name="description" content="My personal portfolio. Find me at @medzz123!" />
       </Head>
       <IdProvider>
         <ThemeProvider
