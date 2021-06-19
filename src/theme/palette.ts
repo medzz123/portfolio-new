@@ -1,6 +1,6 @@
 export const light = {
   hiContrast: '#000000',
-  loContrast: '#FFFFFF',
+  loContrast: '#efefef',
   primary: '#4169e1',
   accent: '#000080',
   shadow: '0px 5px 20px rgba(0, 0, 0, 0.1)',

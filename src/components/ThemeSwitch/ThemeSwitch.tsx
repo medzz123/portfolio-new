@@ -1,4 +1,4 @@
-import Icon from '@components/Icon';
+import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 import { useTheme } from 'next-themes';
 import React, { FunctionComponent, useEffect, useState } from 'react';
 
@@ -22,7 +22,7 @@ const ThemeSwitch: FunctionComponent = () => {
 
   return (
     <ThemeSwitchContainer type="button" data-testid="themeSwitch" onClick={toggleTheme}>
-      <Icon name={theme === 'light' ? 'moon' : 'sun'} />
+      {theme === 'light' ? <SunIcon /> : <MoonIcon />}
     </ThemeSwitchContainer>
   );
 };

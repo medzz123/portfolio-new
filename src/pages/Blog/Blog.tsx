@@ -1,5 +1,6 @@
 import CodeBlock from '@components/Code';
 import Link from '@components/Link';
+import Text from '@components/Text';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { MDXRemote } from 'next-mdx-remote';
@@ -18,6 +19,30 @@ const components = {
   code: (props: { children: string }) => {
     return <CodeBlock language="javascript" value={props?.children} />;
   },
+  // eslint-disable-next-line react/display-name
+  h1: (props: unknown) => {
+    console.log({ props });
+
+    return <Text variant="h1" {...props} />;
+  },
+  // eslint-disable-next-line react/display-name
+  h2: (props: unknown) => {
+    console.log({ props });
+
+    return <Text variant="h2" {...props} />;
+  },
+  // eslint-disable-next-line react/display-name
+  p: (props: unknown) => {
+    console.log({ props });
+
+    return <Text variant="p" {...props} />;
+  },
+  // eslint-disable-next-line react/display-name
+  h3: (props: unknown) => {
+    console.log({ props });
+
+    return <Text variant="h3" {...props} />;
+  },
 };
 
 const Blog: NextPage<{
@@ -30,7 +55,7 @@ const Blog: NextPage<{
         <title>{frontMatter.description} | Mahedi Hasan</title>
       </Head>
       <div>
-        <h1>{frontMatter.title}</h1>
+        <Text variant="h1">{frontMatter.title}</Text>
         <MDXRemote {...source} components={components} />
       </div>
     </BlogContainer>

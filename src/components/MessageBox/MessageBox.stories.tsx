@@ -10,4 +10,6 @@ export default {
 
 const Template: Story = (storyArguments) => <MessageBox {...storyArguments} />;
 
-export const Default = Template.bind({});
+export const Default = Template.bind({
+  children: 'Hello Everyone',
+});
