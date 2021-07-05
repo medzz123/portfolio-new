@@ -6,6 +6,7 @@ exports[`Menu Test 1`] = `
     aria-haspopup="menu"
     class="sxqt3zu"
     data-state="closed"
+    id="radix-id-0-1"
     type="button"
   >
     hello
