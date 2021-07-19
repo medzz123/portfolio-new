@@ -8,7 +8,7 @@ const Seo: FunctionComponent<SeoProps> = (props) => {
     title = 'Mahedi Hasan',
     description = 'Personal portfolio',
     type = 'website',
-    image = 'https://medzz.dev/social.webp',
+    image = 'https://updating.medzz.dev/social.webp',
   } = props;
 
   return (
@@ -22,7 +22,7 @@ const Seo: FunctionComponent<SeoProps> = (props) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content={title} />
-      <meta property="og:url" content="https://medzz.dev" />
+      <meta property="og:url" content="https://updating.medzz.dev" />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:creator" content="@medzz123" />
@@ -31,7 +31,7 @@ const Seo: FunctionComponent<SeoProps> = (props) => {
       <meta property="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
 
-      <link rel="canonical" href="https://medzz.dev" />
+      <link rel="canonical" href="https://updating.medzz.dev" />
     </Head>
   );
 };
