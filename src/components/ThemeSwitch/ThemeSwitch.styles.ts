@@ -1,7 +1,7 @@
 import { styled } from '@theme/config';
 
 export const ThemeSwitchContainer = styled('button', {
-  backgroundColor: '$loContrast',
+  backgroundColor: 'transparent',
   color: '$hiContrast',
   padding: '$0',
   size: '$32',
@@ -14,6 +14,7 @@ export const ThemeSwitchContainer = styled('button', {
   outline: 'none',
   border: 'none',
   transition: 'all 200ms ease',
-  boxShadow: '$colors$shadow',
-  '&:hover, &:focus': {},
+  '&:hover, &:focus': {
+    boxShadow: '$colors$shadow',
+  },
 });
