@@ -17,7 +17,7 @@ const Seo: FunctionComponent<SeoProps> = (props) => {
       <meta name="description" content={description} />
       <meta name="title" content={title} />
 
-      <meta property="og:image" content="https://prutkowski.dev/social.webp" />
+      <meta property="og:image" content={image} />
       <meta property="og:type" content={type} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
