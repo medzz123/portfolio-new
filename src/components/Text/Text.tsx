@@ -2,13 +2,13 @@ import React, { FunctionComponent } from 'react';
 
 import { TextProps } from './Text.models';
 import { TextContainer } from './Text.styles';
-import { mapSize } from './Text.utils';
+import { mapSize, mapWeight } from './Text.utils';
 
 const Text: FunctionComponent<TextProps> = (props) => {
   const {
     children,
     level,
-    weight = 'normal',
+    weight,
     color = 'normal',
     mb = 'small',
     align = 'left',
@@ -16,13 +16,14 @@ const Text: FunctionComponent<TextProps> = (props) => {
   } = props;
 
   const mappedLevel = level || mapSize[variant];
+  const mappedWeight = weight || mapWeight[variant];
 
   return (
     <TextContainer
       as={variant}
       spacing={mb}
       align={align}
-      weight={weight}
+      weight={mappedWeight}
       color={color}
       level={mappedLevel}
       data-testid="text"

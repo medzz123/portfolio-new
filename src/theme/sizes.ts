@@ -30,6 +30,7 @@ export const sizes = {
   52: '3.25rem',
   56: '3.5rem',
   60: '3.75rem',
+  64: '4rem',
   80: '5rem',
   100: '6.25rem',
   148: '9.25rem',

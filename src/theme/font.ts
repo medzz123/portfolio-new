@@ -1,28 +1,28 @@
 export const fontSizes = {
   /**
-   * Normal - 16px
+   * Normal - 24px
    */
-  normal: '1rem',
+  normal: '1.5rem',
   /**
    * Normal - 10px
    */
   small: '0.6rem',
   /**
-   * Info Label - 13px;
+   * Info Label - 16px;
    */
-  info: '0.8125rem',
+  info: '1rem',
   /**
-   * H1 - 36px
+   * H1 - 40px
    */
-  h1: '2.25rem',
+  h1: '2.5rem',
   /**
-   * H2 - 24px
+   * H2 - 32px
    */
-  h2: '1.5rem',
+  h2: '2rem',
   /**
-   * H3 - 18px
+   * H3 - 28px
    */
-  h3: '1.125rem',
+  h3: '1.75rem',
 };
 
 export const fontWeights = {

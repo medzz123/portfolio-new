@@ -1,10 +1,11 @@
+import Layout from '@components/Layout';
+import Seo from '@components/Seo';
 import ThemeSwitch from '@components/ThemeSwitch';
 import environment from '@lib/environment';
 import { pageView } from '@lib/gtag';
 import { IdProvider } from '@radix-ui/react-id';
 import { darkTheme, globalStyles } from '@theme/config';
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
 import Router from 'next/router';
 import { ThemeProvider } from 'next-themes';
 import React, { Fragment } from 'react';
@@ -18,17 +19,16 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <Fragment>
-      <Head>
-        <title>Mahedi Hasan | Software Developer</title>
-        <meta name="description" content="My personal portfolio. Find me at @medzz123!" />
-      </Head>
+      <Seo />
       <IdProvider>
         <ThemeProvider
           attribute="class"
           value={{ light: 'light-theme', dark: darkTheme.className }}
           defaultTheme="system"
         >
-          <Component {...pageProps} />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
           <ThemeSwitch />
         </ThemeProvider>
       </IdProvider>

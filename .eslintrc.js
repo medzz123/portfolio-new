@@ -31,6 +31,9 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'simple-import-sort/imports': 'error',
+
+    // Fuk off display name
+    "react/display-name": 'off'
   },
   settings: {
     react: {

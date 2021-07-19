@@ -2,7 +2,7 @@ import { styled } from '@theme/config';
 
 export const TextContainer = styled('p', {
   margin: '$0',
-  lineHeight: '1.3',
+  lineHeight: '1.5',
   variants: {
     level: {
       normal: {
@@ -69,10 +69,10 @@ export const TextContainer = styled('p', {
         marginBottom: '$0',
       },
       small: {
-        marginBottom: '$16',
+        marginBottom: '$20',
       },
       large: {
-        marginBottom: '$24',
+        marginBottom: '$30',
       },
     },
   },
