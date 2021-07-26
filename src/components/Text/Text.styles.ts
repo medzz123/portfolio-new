@@ -75,5 +75,13 @@ export const TextContainer = styled('p', {
         marginBottom: '$30',
       },
     },
+    font: {
+      abril: {
+        fontFamily: '$abril',
+      },
+      mulish: {
+        fontFamily: '$mulish',
+      },
+    },
   },
 });

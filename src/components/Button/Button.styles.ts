@@ -4,7 +4,7 @@ export const ButtonContainer = styled('button', {
   padding: '$10 $28',
   boxShadow: 'none',
   border: 'none',
-  backgroundColor: '$primary',
+  backgroundColor: '$hiContrast',
   borderRadius: '$sizes$12',
   color: '$loContrast',
   fontSize: '$info',

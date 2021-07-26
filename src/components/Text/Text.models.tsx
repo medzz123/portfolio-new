@@ -24,7 +24,15 @@ export interface TextProps {
   /**
    * Margin Bottom
    */
-  mb?: 'none' | 'small' | 'large';
+  mb?: SpacingVariants;
+  /**
+   * Font family
+   */
+  font?: FontVariant;
 }
+
+export type FontVariant = 'abril' | 'mulish';
+
+export type SpacingVariants = 'none' | 'small' | 'large';
 
 export type TextVariant = 'p' | 'span' | 'h1' | 'h2' | 'h3';

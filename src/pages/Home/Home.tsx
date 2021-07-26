@@ -1,6 +1,6 @@
-import { Box } from '@components/Box';
 import Button from '@components/Button';
-import Text from '@components/Text';
+import Hero from '@components/Hero';
+import { H1 } from '@components/Text';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -12,8 +12,11 @@ const Home: NextPage = () => {
 
   return (
     <HomeContainer>
-      <Box>
-        <Text variant="h1">Home Page</Text>
+      <Hero expand={true}>
+        <H1>
+          Hey! I am Mahedi. I&apos;m a Software Developer, having an awesome time using React, React
+          Native & Node Js.
+        </H1>
 
         <Button
           onClick={() => {
@@ -22,7 +25,7 @@ const Home: NextPage = () => {
         >
           Blog
         </Button>
-      </Box>
+      </Hero>
     </HomeContainer>
   );
 };

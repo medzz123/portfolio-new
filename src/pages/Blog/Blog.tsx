@@ -1,15 +1,16 @@
-import { Box } from '@components/Box';
 import CodeBlock from '@components/Code';
+import Hero from '@components/Hero';
+import Layout from '@components/Layout';
 import Link from '@components/Link';
 import Seo from '@components/Seo';
-import Text from '@components/Text';
+import { H1, H2, H3, P } from '@components/Text';
 import { NextPage } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 
 import { useReadingTime } from './Blog.hooks';
 import { BlogProps } from './Blog.models';
-import { BlogContainer, Divider, TagsContainer } from './Blog.styles';
+import { BlogContainer } from './Blog.styles';
 
 const Blog: NextPage<BlogProps> = (props) => {
   const { source, frontMatter } = props;
@@ -21,27 +22,18 @@ const Blog: NextPage<BlogProps> = (props) => {
     <BlogContainer>
       <Seo title={frontMatter.title} description={frontMatter.description} />
 
-      <Box css={{ width: '$full' }}>
-        <Box css={{ mb: '$20' }}>
-          <Text variant="h1" mb="none">
-            {frontMatter.title}
-          </Text>
-          <TagsContainer>
-            {tags.map((tag) => (
-              <Text variant="span" key={tag} level="info" mb="none">
-                {frontMatter.title}
-              </Text>
-            ))}
-          </TagsContainer>
-        </Box>
+      <Hero
+        title={frontMatter.title}
+        date={frontMatter.date}
+        description={frontMatter.description}
+        image={frontMatter.image}
+        tags={tags}
+      />
 
-        <Box css={{ width: '$full' }}>
-          <Text variant="p" level="info">
-            {readingLength.min} - {readingLength.max} minutes
-          </Text>
-        </Box>
-
-        <Divider />
+      <Layout>
+        <P level="info">
+          {readingLength.min} - {readingLength.max} minutes
+        </P>
 
         <article ref={articleRef}>
           <MDXRemote
@@ -52,14 +44,14 @@ const Blog: NextPage<BlogProps> = (props) => {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 <CodeBlock language="javascript" value={(props as any)?.children} />
               ),
-              h1: (props: unknown) => <Text variant="h1" {...props} />,
-              h2: (props: unknown) => <Text variant="h2" {...props} />,
-              p: (props: unknown) => <Text variant="p" {...props} />,
-              h3: (props: unknown) => <Text variant="h3" {...props} />,
+              h1: H1,
+              h2: H2,
+              p: P,
+              h3: H3,
             }}
           />
         </article>
-      </Box>
+      </Layout>
     </BlogContainer>
   );
 };

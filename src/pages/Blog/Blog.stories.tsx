@@ -11,7 +11,7 @@ export default {
 const Template: Story = (storyArguments) => (
   <Blog
     source={{ compiledSource: 'hello' }}
-    frontMatter={{ title: 'hello', description: 'hello', tags: 'hi' }}
+    frontMatter={{ title: 'hello', description: 'hello', tags: 'hi', date: '2014-', image: 'none' }}
     {...storyArguments}
   />
 );

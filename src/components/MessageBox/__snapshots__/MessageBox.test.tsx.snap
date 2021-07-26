@@ -7,7 +7,7 @@ exports[`MessageBox Test 1`] = `
     data-testid="messageBox"
   >
     <p
-      class="sx180ps sx180ps59c0g--level-info sx180psh4u4f--weight-normal sx180psfxkwo--color-normal sx180ps0o7ux--align-left sx180pszvy3i--spacing-none"
+      class="sx8ivet sx8ivet59c0g--level-info sx8iveth4u4f--weight-normal sx8ivetfxkwo--color-normal sx8ivet0o7ux--align-left sx8ivetzvy3i--spacing-none sx8ivet8316w--font-mulish"
       data-testid="text"
     >
       Hello

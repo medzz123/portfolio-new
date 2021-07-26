@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero Test 1`] = `
+<div>
+  <div
+    class="sxodqir"
+    data-testid="hero"
+  >
+    <div
+      class="sxsw5wg"
+      data-testid="layout"
+    >
+      Hello
+    </div>
+  </div>
+</div>
+`;

@@ -1,10 +1,10 @@
 export const fontSizes = {
   /**
-   * Normal - 24px
+   * Normal - 18px
    */
-  normal: '1.5rem',
+  normal: '1.125rem',
   /**
-   * Normal - 10px
+   * Small - 10px
    */
   small: '0.6rem',
   /**
@@ -12,9 +12,9 @@ export const fontSizes = {
    */
   info: '1rem',
   /**
-   * H1 - 40px
+   * H1
    */
-  h1: '2.5rem',
+  h1: '7vh',
   /**
    * H2 - 32px
    */

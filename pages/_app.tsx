@@ -1,4 +1,3 @@
-import Layout from '@components/Layout';
 import Seo from '@components/Seo';
 import ThemeSwitch from '@components/ThemeSwitch';
 import environment from '@lib/environment';
@@ -26,9 +25,8 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           value={{ light: 'light-theme', dark: darkTheme.className }}
           defaultTheme="system"
         >
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <Component {...pageProps} />
+
           <ThemeSwitch />
         </ThemeProvider>
       </IdProvider>

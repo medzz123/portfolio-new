@@ -3,7 +3,7 @@
 exports[`Text Test 1`] = `
 <div>
   <p
-    class="sx180ps sx180ps9n3hc--level-normal sx180psh4u4f--weight-normal sx180psfxkwo--color-normal sx180ps0o7ux--align-left sx180pshb40l--spacing-small"
+    class="sx8ivet sx8ivet9n3hc--level-normal sx8iveth4u4f--weight-normal sx8ivetfxkwo--color-normal sx8ivet0o7ux--align-left sx8ivethb40l--spacing-small sx8ivet8316w--font-mulish"
     data-testid="text"
   >
     Hello

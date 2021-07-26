@@ -13,7 +13,8 @@ export const { css, styled, global, theme, getCssString } = createCss({
     fontSizes: fontSizes,
     fontWeights: fontWeights,
     fonts: {
-      inter: 'Inter, sans-serif',
+      abril: "'Abril Fatface', cursive;",
+      mulish: "'Mulish', sans-serif",
     },
     zIndices: zIndices,
   },
@@ -105,7 +106,7 @@ export const globalStyles = global({
   '*, ::before, ::after': { boxSizing: 'border-box' },
   body: { margin: 0, backgroundColor: '$mainBackground' },
   '*': {
-    fontFamily: '$inter',
+    fontFamily: '$mulish',
   },
   html: {
     display: 'flex',
@@ -116,6 +117,9 @@ export const globalStyles = global({
     flex: 1,
     height: 'auto',
     minHeight: 'auto',
+  },
+  main: {
+    flexDirection: 'column',
   },
 });
 
