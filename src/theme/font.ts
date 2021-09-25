@@ -14,7 +14,7 @@ export const fontSizes = {
   /**
    * H1
    */
-  h1: '7vh',
+  h1: '2.5rem',
   /**
    * H2 - 32px
    */
@@ -39,9 +39,9 @@ export const fontWeights = {
    */
   semiBold: 600,
   /**
-   * Bold - 700
+   * Bold - 800
    */
-  bold: 700,
+  bold: 800,
   /**
    * Black - 900
    */

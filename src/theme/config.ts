@@ -117,6 +117,7 @@ export const globalStyles = global({
     flex: 1,
     height: 'auto',
     minHeight: 'auto',
+    flexDirection: 'column',
   },
   main: {
     flexDirection: 'column',

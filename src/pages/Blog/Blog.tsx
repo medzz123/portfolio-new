@@ -1,16 +1,21 @@
+import { Box } from '@components/Box';
 import CodeBlock from '@components/Code';
-import Hero from '@components/Hero';
-import Layout from '@components/Layout';
 import Link from '@components/Link';
 import Seo from '@components/Seo';
-import { H1, H2, H3, P } from '@components/Text';
+import { H1, H2, H3, P, S } from '@components/Text';
 import { NextPage } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 
 import { useReadingTime } from './Blog.hooks';
 import { BlogProps } from './Blog.models';
-import { BlogContainer } from './Blog.styles';
+import {
+  ArticleContainer,
+  BlogContainer,
+  MainImage,
+  MainImageContainer,
+  Socials,
+} from './Blog.styles';
 
 const Blog: NextPage<BlogProps> = (props) => {
   const { source, frontMatter } = props;
@@ -22,19 +27,34 @@ const Blog: NextPage<BlogProps> = (props) => {
     <BlogContainer>
       <Seo title={frontMatter.title} description={frontMatter.description} />
 
-      <Hero
-        title={frontMatter.title}
-        date={frontMatter.date}
-        description={frontMatter.description}
-        image={frontMatter.image}
-        tags={tags}
-      />
+      <ArticleContainer>
+        <P mb="none" level="info">
+          Posted 30 January 2021. 04:00am
+        </P>
 
-      <Layout>
+        <H1 font="mulish" weight="bold" mb="none">
+          iPhone 11 Max Review - Outstanding masterpiece by Apple
+        </H1>
+
+        <Box css={{ display: 'flex' }}>
+          {tags.map((tag) => (
+            <Box css={{ marginRight: '$12' }} key={tag}>
+              <S>{tag}</S>
+            </Box>
+          ))}
+        </Box>
+
         <P level="info">
           {readingLength.min} - {readingLength.max} minutes
         </P>
 
+        <MainImageContainer>
+          <MainImage></MainImage>
+        </MainImageContainer>
+
+        <Socials>
+          <p>Hello</p>
+        </Socials>
         <article ref={articleRef}>
           <MDXRemote
             {...source}
@@ -51,7 +71,7 @@ const Blog: NextPage<BlogProps> = (props) => {
             }}
           />
         </article>
-      </Layout>
+      </ArticleContainer>
     </BlogContainer>
   );
 };

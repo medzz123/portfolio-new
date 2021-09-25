@@ -1,4 +1,6 @@
+import Footer from '@components/Footer';
 import Header from '@components/Header';
+import Layout from '@components/Layout';
 import Seo from '@components/Seo';
 import ThemeSwitch from '@components/ThemeSwitch';
 import environment from '@lib/environment';
@@ -27,8 +29,10 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
           defaultTheme="system"
         >
           <Header />
-          <Component {...pageProps} />
-
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+          <Footer />
           <ThemeSwitch />
         </ThemeProvider>
       </IdProvider>

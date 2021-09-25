@@ -1,6 +1,5 @@
 import Button from '@components/Button';
-import Hero from '@components/Hero';
-import { H1 } from '@components/Text';
+import { H3, P } from '@components/Text';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -12,20 +11,43 @@ const Home: NextPage = () => {
 
   return (
     <HomeContainer>
-      <Hero expand={true}>
-        <H1>
-          Hey! I am Mahedi. I&apos;m a Software Developer, having an awesome time using React, React
-          Native & Node Js.
-        </H1>
+      <H3>
+        Hey! I am Mahedi. I&apos;m a Software Developer, having an awesome time using React, React
+        Native & Node Js.
+      </H3>
 
-        <Button
-          onClick={() => {
-            router.push('/blog/example');
-          }}
-        >
-          Blog
-        </Button>
-      </Hero>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+      <P>Lorem Ipsum is Lorem Ipsum, Lorem Ipsum</P>
+
+      <Button
+        onClick={() => {
+          router.push('/blog/example');
+        }}
+      >
+        Blog
+      </Button>
     </HomeContainer>
   );
 };

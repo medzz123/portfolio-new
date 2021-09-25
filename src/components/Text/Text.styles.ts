@@ -16,12 +16,15 @@ export const TextContainer = styled('p', {
       },
       h1: {
         fontSize: '$h1',
+        lineHeight: '1',
       },
       h2: {
         fontSize: '$h2',
+        lineHeight: '1.3',
       },
       h3: {
         fontSize: '$h3',
+        lineHeight: '1.3',
       },
     },
     weight: {
