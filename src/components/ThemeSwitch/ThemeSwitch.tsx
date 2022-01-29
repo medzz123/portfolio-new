@@ -21,7 +21,11 @@ const ThemeSwitch: FunctionComponent = () => {
   if (!mounted) return null;
 
   return (
-    <ThemeSwitchContainer type="button" data-testid="themeSwitch" onClick={toggleTheme}>
+    <ThemeSwitchContainer
+      type="button"
+      data-testid="themeSwitch"
+      onClick={toggleTheme}
+    >
       {theme === 'light' ? <SunIcon /> : <MoonIcon />}
     </ThemeSwitchContainer>
   );

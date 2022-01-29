@@ -1,9 +1,8 @@
 import CodeBlock from '@components/Code';
-import Hero from '@components/Hero';
 import Layout from '@components/Layout';
 import Link from '@components/Link';
 import Seo from '@components/Seo';
-import { H1, H2, H3, P } from '@components/Text';
+import { H1, H2, H3, P, S } from '@components/Text';
 import { NextPage } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
@@ -22,16 +21,14 @@ const Blog: NextPage<BlogProps> = (props) => {
     <BlogContainer>
       <Seo title={frontMatter.title} description={frontMatter.description} />
 
-      <Hero
-        title={frontMatter.title}
-        date={frontMatter.date}
-        description={frontMatter.description}
-        image={frontMatter.image}
-        tags={tags}
-      />
+      <S>{frontMatter.title}</S>
+      <S>{frontMatter.date}</S>
+      <S>{frontMatter.description}</S>
+      <S>{frontMatter.image}</S>
+      <S>{tags}</S>
 
       <Layout>
-        <P level="info">
+        <P>
           {readingLength.min} - {readingLength.max} minutes
         </P>
 
@@ -42,7 +39,10 @@ const Blog: NextPage<BlogProps> = (props) => {
               Link,
               code: (props: unknown) => (
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                <CodeBlock language="javascript" value={(props as any)?.children} />
+                <CodeBlock
+                  language="javascript"
+                  value={(props as any)?.children}
+                />
               ),
               h1: H1,
               h2: H2,

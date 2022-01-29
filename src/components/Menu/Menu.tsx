@@ -1,4 +1,3 @@
-import Icon from '@components/Icon';
 import { Root } from '@radix-ui/react-dropdown-menu';
 import React, { FunctionComponent } from 'react';
 
@@ -10,9 +9,7 @@ const Menu: FunctionComponent<MenuProps> = (props) => {
 
   return (
     <Root>
-      <StyledTrigger>
-        {label} <Icon size={0.6} name="chevron-down" />
-      </StyledTrigger>
+      <StyledTrigger>{label} A</StyledTrigger>
       <StyledContent>
         {items.map((item) => (
           <StyledItem key={item.label} onSelect={item.onClick}>

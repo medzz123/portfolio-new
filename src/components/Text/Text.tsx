@@ -1,40 +1,46 @@
-import React, { FunctionComponent } from 'react';
+import React, { forwardRef } from 'react';
 
 import { TextProps } from './Text.models';
 import { TextContainer } from './Text.styles';
 import { mapFont, mapSize, mapSpacing, mapWeight } from './Text.utils';
 
-const Text: FunctionComponent<TextProps> = (props) => {
+const Text = forwardRef<HTMLParagraphElement, TextProps>((props, ref) => {
   const {
     children,
-    level,
+    size,
     weight,
-    color = 'normal',
+    color = 'hiContrast',
     mb,
     align = 'left',
     variant = 'p',
     font,
+    className,
   } = props;
 
-  const mappedLevel = level || mapSize[variant];
+  const mappedSize = size || mapSize[variant];
   const mappedWeight = weight || mapWeight[variant];
   const mappedSpacing = mb || mapSpacing[variant];
   const mappedFont = font || mapFont[variant];
 
   return (
     <TextContainer
+      ref={ref}
       as={variant}
+      className={className}
+      css={{
+        fontSize: '$' + mappedSize,
+        fontWeight: mappedWeight,
+        color: '$' + color,
+        font: '$fonts$' + mappedFont,
+      }}
       spacing={mappedSpacing}
-      font={mappedFont}
       align={align}
-      weight={mappedWeight}
       color={color}
-      level={mappedLevel}
       data-testid="text"
     >
       {children}
     </TextContainer>
   );
-};
+});
 
 export default Text;

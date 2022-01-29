@@ -1,4 +1,6 @@
-import { FontSizes, FontWeights } from '@theme/font';
+import { Fonts, FontSizes, FontWeights } from '@theme/font';
+import { Palette } from '@theme/palette';
+import { ReactNode } from 'react';
 
 export interface TextProps {
   /**
@@ -8,7 +10,7 @@ export interface TextProps {
   /**
    * Replaces default variant
    */
-  level?: FontSizes;
+  size?: FontSizes;
   /**
    * Font weight
    */
@@ -16,7 +18,7 @@ export interface TextProps {
   /**
    * Color
    */
-  color?: 'error' | 'success' | 'normal' | 'info';
+  color?: Palette;
   /**
    * Text Align
    */
@@ -28,10 +30,10 @@ export interface TextProps {
   /**
    * Font family
    */
-  font?: FontVariant;
+  font?: Fonts;
+  children?: ReactNode;
+  className?: string;
 }
-
-export type FontVariant = 'abril' | 'mulish';
 
 export type SpacingVariants = 'none' | 'small' | 'large';
 

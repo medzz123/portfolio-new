@@ -19,8 +19,14 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { slug } }: { params: { slug: string } }) {
-  const markdownWithMetadata = fs.readFileSync(path.join('src/content/', slug + '.mdx')).toString();
+export async function getStaticProps({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) {
+  const markdownWithMetadata = fs
+    .readFileSync(path.join('src/content/', slug + '.mdx'))
+    .toString();
 
   const { content, data } = matter(markdownWithMetadata);
   const mdxSource = await serialize(content, { scope: data });

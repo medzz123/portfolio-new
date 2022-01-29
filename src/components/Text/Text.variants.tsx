@@ -1,24 +1,46 @@
-import React from 'react';
+import { forwardRef } from 'react';
 
 import Text from './Text';
 import { TextProps } from './Text.models';
 
-export const H1: React.FunctionComponent<TextProps> = (props) => {
-  return <Text variant="h1" {...props} />;
-};
+const H1 = forwardRef<HTMLHeadingElement, Omit<TextProps, 'variant'>>(
+  (props, ref) => (
+    <Text ref={ref} variant="h1" {...props}>
+      {props?.children}
+    </Text>
+  )
+);
 
-export const H2: React.FunctionComponent<TextProps> = (props) => {
-  return <Text variant="h2" {...props} />;
-};
+const H2 = forwardRef<HTMLHeadingElement, Omit<TextProps, 'variant'>>(
+  (props, ref) => (
+    <Text ref={ref} variant="h2" {...props}>
+      {props?.children}
+    </Text>
+  )
+);
 
-export const H3: React.FunctionComponent<TextProps> = (props) => {
-  return <Text variant="h3" {...props} />;
-};
+const H3 = forwardRef<HTMLHeadingElement, Omit<TextProps, 'variant'>>(
+  (props, ref) => (
+    <Text ref={ref} variant="h3" {...props}>
+      {props?.children}
+    </Text>
+  )
+);
 
-export const P: React.FunctionComponent<TextProps> = (props) => {
-  return <Text variant="p" {...props} />;
-};
+const P = forwardRef<HTMLParagraphElement, Omit<TextProps, 'variant'>>(
+  (props, ref) => (
+    <Text ref={ref} variant="p" {...props}>
+      {props?.children}
+    </Text>
+  )
+);
 
-export const S: React.FunctionComponent<TextProps> = (props) => {
-  return <Text variant="span" {...props} />;
-};
+const S = forwardRef<HTMLParagraphElement, Omit<TextProps, 'variant'>>(
+  (props, ref) => (
+    <Text ref={ref} variant="span" {...props}>
+      {props?.children}
+    </Text>
+  )
+);
+
+export { H1, H2, H3, P, S };

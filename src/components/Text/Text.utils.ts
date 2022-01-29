@@ -1,23 +1,23 @@
-import { FontSizes, FontWeights } from '@theme/font';
+import { Fonts, FontSizes, FontWeights } from '@theme/font';
 
-import { FontVariant, SpacingVariants, TextVariant } from './Text.models';
+import { SpacingVariants, TextVariant } from './Text.models';
 
 export const mapSize: {
   [key in TextVariant]: FontSizes;
 } = {
-  p: 'normal',
-  span: 'normal',
-  h1: 'h1',
-  h2: 'h2',
-  h3: 'h3',
+  p: 'body',
+  span: 'body',
+  h1: 36,
+  h2: 24,
+  h3: 20,
 };
 
 export const mapWeight: { [key in TextVariant]: FontWeights } = {
-  p: 'normal',
-  span: 'normal',
-  h1: 'normal',
-  h2: 'bold',
-  h3: 'bold',
+  p: 400,
+  span: 400,
+  h1: 400,
+  h2: 700,
+  h3: 700,
 };
 
 export const mapSpacing: { [key in TextVariant]: SpacingVariants } = {
@@ -28,10 +28,10 @@ export const mapSpacing: { [key in TextVariant]: SpacingVariants } = {
   h3: 'large',
 };
 
-export const mapFont: { [key in TextVariant]: FontVariant } = {
+export const mapFont: { [key in TextVariant]: Fonts } = {
   p: 'mulish',
   span: 'mulish',
   h1: 'abril',
   h2: 'abril',
-  h3: 'abril',
+  h3: 'mulish',
 };

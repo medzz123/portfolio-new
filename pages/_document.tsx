@@ -1,6 +1,12 @@
 import { GA_TRACKING_ID } from '@lib/gtag';
-import { getCssString } from '@theme/config';
-import NextDocument, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
+import { getCssText } from '@theme/config';
+import NextDocument, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from 'next/document';
 import React, { Fragment } from 'react';
 
 export default class Document extends NextDocument<{ isProduction: boolean }> {
@@ -26,7 +32,11 @@ export default class Document extends NextDocument<{ isProduction: boolean }> {
       <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mulish:wght@200;400;900&display=swap"
             rel="stylesheet"
@@ -35,7 +45,10 @@ export default class Document extends NextDocument<{ isProduction: boolean }> {
           {isProduction && (
             <Fragment>
               <link rel="icon" href="/favicon.ico" />
-              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              />
               <script
                 dangerouslySetInnerHTML={{
                   __html: `
@@ -52,7 +65,10 @@ export default class Document extends NextDocument<{ isProduction: boolean }> {
             </Fragment>
           )}
 
-          <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssString() }} />
+          <style
+            id="stitches"
+            dangerouslySetInnerHTML={{ __html: getCssText() }}
+          />
         </Head>
         <body>
           <Main />
